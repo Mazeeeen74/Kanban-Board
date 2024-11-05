@@ -1,0 +1,79 @@
+<div class="root">
+    <div class="navbar">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <h1 class="app-name">kanban</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="boardBar">
+        <div class="boardName">
+            <p>Board Name</p>
+        </div>
+
+    </div>
+
+    <div class="wholeColumn" cdkDropListGroup>
+        <!-- Adding a column manually -->
+        <!-- <div class="Add-Column" > 
+            <input type="text" placeholder="Column Name" [(ngModel)] ="columnName">
+            <button type="button" (click)="newColumn()">Add column</button>
+        </div> -->
+        <div class="columns" *ngFor="let column of board.column , let i = index">
+            <div class="column-content" cdkDropList #todoList="cdkDropList" [cdkDropListData]="column.task"
+                (cdkDropListDropped)="drop($event)">
+                <p class="Column-Header" id="Header">{{column.name}}</p>
+                <div class="Card-Cotent" *ngFor="let item of column.task" cdkDrag>
+                    <div class="Colored-Point"></div>
+                    <p>{{item}}</p>
+                    <!-- to delete the content of the card -->
+                    <!-- <button type="button" (click)="deleteContent(i , j)"> delete</button> -->
+
+                </div>
+
+            </div>
+            <div class="Card-input" *ngIf="column.name == 'Todo'">
+                <input class="Card-input" type="text" [(ngModel)]="inputText" placeholder="What's on your mind..?"
+                    (keydown)="keyPress($event,0)">
+                <button type="button" (click)="AddFunction(0)">ADD</button>
+            </div>
+        </div>
+
+        <!-- <div class="columns"*ngFor="let column of board.column">
+            <div class="column-content" cdkDropList #todoList="cdkDropList" [cdkDropListData]="column.task"
+                (cdkDropListDropped)="drop($event)">
+                <p class="Column-Header">In Progress</p>
+                <div class="Card-Cotent" *ngFor="let items of column.task" cdkDrag>
+                    <div class="Colored-Point"></div>
+                    <p>{{items}}</p>
+
+                </div>
+
+            </div>
+        </div> -->
+        <!-- <div class="columns">
+            <div class="column-content" cdkDropList #todoList="cdkDropList" [cdkDropListData]="done"
+            (cdkDropListDropped)="drop($event)">
+                <p class="Column-Header">Done</p>
+                <div class="Card-Cotent" cdkDrag>
+                    <div class="Colored-Point"></div>
+
+                </div>
+                <hr>
+                <div class="Card-Cotent">
+                    <div class="Colored-Point"></div>
+                    <p>Dummy Value </p>
+
+                </div>
+                <hr>
+                <div class="Card-Cotent">
+                    <div class="Colored-Point"></div>
+                    <p>Dummy Value</p>
+
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</div>

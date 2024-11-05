@@ -1,0 +1,161 @@
+.root {
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     
+}
+
+.navbar { 
+    width: 100%;
+    background-color: black; 
+    opacity: 0.7;
+    height: fit-50px;
+
+}
+.app-name { 
+    
+    font-size: 29;
+    font-weight:bold;
+    font-family: "nunito", sans-serif;
+    padding: 3px 20px;
+    background: -webkit-linear-gradient(#13f7f4, #2af598);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.boardBar {
+    font-family: "nunito", sans-serif; 
+    background-color: grey;
+    opacity: 0.5;
+    
+}
+
+.boardName { 
+    color: white;
+    padding: 3px 40px;
+    font-size: 20px;
+}
+.wholeColumn { 
+    display: flex ; 
+    flex-direction: row;
+    flex-grow: 1 ;
+    background-color: white;
+    opacity: 0.5;
+    margin: 20px;
+    border-radius: 8px;
+    height: fit-content;
+}
+.columns { 
+    display: flex ;
+    flex-direction: column ;
+    margin: 30px;
+    padding: 3px 18px;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    flex-grow: 1;
+    border-radius: 5px;
+    height: fit-content;
+
+}
+.column-content { 
+    color: white;
+    font-size: 18px;
+    height: 100%;
+    width: 100% ;
+    overflow: hidden;
+    
+}
+
+.Column-Header { 
+    text-align: left;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 3px 18px ;
+    text-align: left;
+}
+.Card-Cotent { 
+    display: flex;
+    flex-direction: row; 
+    width: 90%;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    color: rgb(59, 59, 59);
+    font-weight: 500;
+    cursor: move;
+    overflow: hidden;
+
+    
+}
+.Colored-Point{     
+    margin: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50% ;
+    background-color: red;
+    flex-shrink: 0;
+} 
+.Card-input{ 
+    display: flex;
+    flex-direction: row; 
+    width: 90%;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    color: rgb(59, 59, 59);
+    font-weight: 500;
+    flex-shrink: none;
+    
+
+}
+input[type=text] { 
+width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  word-wrap: break-word;
+  font-size: 15px;
+  font-weight: 500;
+  
+}
+  .Card-input input:focus { 
+    outline: none;
+ }
+
+.Card-input button { 
+    border-radius: 5px;
+    width: 20%;
+    border: none;
+    cursor: pointer;
+    transition-delay: 6s;
+} 
+.Card-input button:hover { 
+    background: -webkit-linear-gradient(#13f7f4, #2af598);
+    transition-delay: 6s ease ;
+}
+.Background-Image { 
+    display: flex;
+    justify-content: right;
+    
+
+}
+.Background-Image button { 
+    border-radius: 5px;
+    width: 20%;
+    border: none;
+    cursor: pointer;
+    margin: 20px 100px;
+    background-color: white;
+    opacity: 0.6;
+    color: black;
+    padding: 3px 10px;
+    height: 50px ;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.Background-Image button:hover  { 
+background: -webkit-linear-gradient(#13f7f4, #2af598);
+}
